@@ -1,0 +1,216 @@
+/*-------------------------
+    Simple reset
+--------------------------*/
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+
+a, a:visited {
+    outline:none;
+    color:#389dc1;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+
+
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+body {
+    font:15px/1.3 Arial, sans-serif;
+    background: url(../img/background.png);
+    background-size: cover; 
+    color:#fff;
+}
+.player
+{
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 10px
+}
+#btnPlay,#btnPause,#btnStop,#btnforward
+{
+    float: left;
+    display: inline-block;
+    height: 32px;
+    width:32px;               
+}
+#btnPlay
+{
+     background: url(../img/Play-Blue-Button-icon.png) no-repeat;
+}
+#btnPause
+{
+     background: url(../img/Pause-Blue-Button-icon.png) no-repeat;
+}
+#btnStop
+{
+     background: url(../img/Button-Stop-icon.png) no-repeat;
+}
+#btnforward
+{
+     background: url(../img/Button-Forward-icon.png) no-repeat;
+}           
+.content{
+    display: table;
+    padding:20px;
+}
+#currentSong,img
+{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.clear
+{
+    clear:both;
+}
+#currentSong
+{    
+    width:50%;
+}
+  img
+{    
+    width: 150px;
+    height:150px;
+    border-radius: 10px;
+}  
+.mainContainer
+{
+    width:980px;
+    margin:60px auto;    
+}
+.playerContainer,.playlist
+{
+    float:left;
+    margin:10px;
+   
+}
+
+#upload,.playlist,.userPlaylist{     
+    float:left;
+    font-family:'PT Sans Narrow', sans-serif;
+    background-color:#373a3d;
+    background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+    background-image:-moz-linear-gradient(top, #373a3d, #313437);
+    background-image:linear-gradient(top, #373a3d, #313437);
+    min-width:200px;
+    padding:30px;
+    border-radius:25px;   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop{    
+    margin-bottom: 30px;    
+    text-align: center;
+    text-transform: uppercase;
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+}
+
+#drop a{
+    background-color:#007a96;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:inline-block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+    margin:0 -30px;
+    border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;
+}
+
+#upload ul li{
+
+    background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);
+
+    border-top:1px solid #3d4043;
+    border-bottom:1px solid #2b2e31;
+    padding:15px;
+    height: 52px;
+
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#upload ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#upload ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#upload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+    color:red;
+}
+
+
