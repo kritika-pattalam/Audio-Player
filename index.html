@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mini Ajax File Upload Form</title>
+		<!-- Google web fonts -->
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel='stylesheet' />
+		<!-- The main CSS file -->
+		<link href="assets/css/style.css" rel="stylesheet" />        
+        </head>
+
+	<body>
+        <div class="mainContainer">
+            <div class="playlist">
+                <a id="playAll" href="#">Play All</a>
+                <h1>Playlist</h1>
+                <div id="musicList"></div>
+            </div>
+            <div class="playerContainer">
+                <form id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+                    <div class="container">
+                        <div class="content">
+                            <img src="assets/img/Homescreen-39e31765-9cf4.gif"/>
+                            <p id="currentSong"></p>
+                        </div>
+                        <div class="player">                    
+                            <audio id="player">		
+                                 <track kind="captions" src="subtitles.srt" srclang="en"></track>
+                            <!--
+                            <source src="caro.mp3" />
+                            <source src="caro.ogg" />
+                            -->
+                            </audio>
+                            <a href="#" id="btnPlay"></a>
+                            <a href="#" id="btnPause"></a>
+                            <a href="#" id="btnStop"></a>
+                            <a href="#" id="btnVolUp">Volume +</a>
+                            <a href="#" id="btnVolDown">Volume -</a>
+                            <a href="#" id="btnforward"></a>
+                            <div class="clear"></div>
+                            <span id="songTime"></span>
+                            <input id="sliderTime" type="range" min="0" value="0" />
+                        </div>                
+                        <div id="display"></div>
+                        
+                        
+                    </div>
+                    <div id="drop">	
+                        <a>Browse</a>
+                        <input type="file" accept="audio/*" name="upl" multiple />
+                    </div>
+                    <ul>
+                        <!-- The file uploads will be shown here -->
+                    </ul>
+                </form>
+            </div>
+            <div class="userPlaylist">
+                <h1>Your playlist</h1>
+                <p class="msg">Add songs to your list</p>
+                <div id="upload-list"></div>
+            </div>
+            
+        </div>
+		
+
+		
+        
+		<!-- JavaScript Includes -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.knob.js"></script>
+
+		<!-- jQuery File Upload Dependencies -->
+		<script src="assets/js/jquery.ui.widget.js"></script>
+		<script src="assets/js/jquery.iframe-transport.js"></script>
+		<script src="assets/js/jquery.fileupload.js"></script>
+		
+		<!-- Our main JS file -->
+		<script src="assets/js/script.js"></script>
+        <script src="assets/js/music.js"></script>
+
+
+		<!-- Only used for the demos. Please ignore and remove. --> 
+        
+
+	</body>
+</html>
